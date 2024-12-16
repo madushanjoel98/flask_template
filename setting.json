@@ -1,0 +1,12 @@
+{
+    "database": {
+      "db": "tut",
+      "host": "localhost",
+      "password": "12345",
+      "username": "root",
+      "port": "3306"
+    },
+    "appname": "flaskOS",
+    "mailpassword": "",
+    "secure": true
+  }
