@@ -1,2 +1,2 @@
 # flask_template
- common template for flask .. mysql
+Common structer of Flask created by Madushanjoel. template includes mySQL connection,JWT security 
