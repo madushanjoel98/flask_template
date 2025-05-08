@@ -10,4 +10,8 @@
     "mailpassword": "",
     "secure": true,
     "secret_key":"your_secret_key_here"
+    ,
+    "cross_orgins":[
+      "http://127.0.0.1:5000"
+    ]
   }
