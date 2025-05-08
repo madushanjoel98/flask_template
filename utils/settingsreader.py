@@ -10,5 +10,6 @@ def propReader():
 
 
 def isSeucre():
+    
     return propReader()["secure"]
 

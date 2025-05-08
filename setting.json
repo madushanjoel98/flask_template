@@ -8,5 +8,6 @@
     },
     "appname": "flaskOS",
     "mailpassword": "",
-    "secure": true
+    "secure": true,
+    "secret_key":"your_secret_key_here"
   }

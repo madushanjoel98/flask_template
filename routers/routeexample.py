@@ -1,6 +1,11 @@
 from flask import Blueprint, jsonify, request
 from model import commonresponsemodel as respm
 from utils import commons as cv
+from flask_jwt_extended.view_decorators import jwt_required
+from flask_jwt_extended.utils import create_access_token, get_jwt_identity,\
+    create_refresh_token
+from configs.jwt_initing import authenticateUser
+from flask_jwt_extended.typing import ExpiresDelta
 
 loginController = Blueprint("logincontroller", __name__)
 
@@ -20,10 +25,23 @@ def signupUser():
     return jsonify(res.createDictionarie()), stCode
 
 
-@loginController.route('/hi', methods=[cv.GET])
 
-def sayhi():
-  
-    return "HI"
+@loginController.route("/login", methods=["POST"])
+def login():
+    data = request.get_json()
+    if(authenticateUser(data.get("username"), data.get("password"))== None):
+        return jsonify({"msg": "Bad username or password"}), 401
 
+    access_token = create_access_token(identity=data.get("username"), expires_delta=None)
+    return jsonify(access_token=access_token )
+
+
+# Protect a route with jwt_required, which will kick out requests
+# without a valid JWT present.
+@loginController.route("/protected", methods=["GET"])
+@jwt_required()
+def protected():
+    # Access the identity of the current user with get_jwt_identity
+    current_user = get_jwt_identity()
+    return jsonify(logged_in_as=current_user), 200
 
