@@ -1,17 +1,17 @@
 {
-    "database": {
-      "db": "tut",
-      "host": "localhost",
-      "password": "12345",
-      "username": "root",
-      "port": "3306"
-    },
-    "appname": "flaskOS",
-    "mailpassword": "",
-    "secure": true,
-    "secret_key":"your_secret_key_here"
-    ,
-    "cross_orgins":[
-      "http://127.0.0.1:5000"
-    ]
-  }
+  "file_location": "C:/",
+  "database": {
+    "db": "tut",
+    "host": "localhost",
+    "password": "12345",
+    "username": "root",
+    "port": "3306"
+  },
+  "appname": "flaskOS",
+  "mailpassword": "",
+  "secure": true,
+  "secret_key": "your_secret_key_here",
+  "cross_orgins": [
+    "http://127.0.0.1:5000"
+  ]
+}

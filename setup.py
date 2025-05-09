@@ -1,5 +1,7 @@
-from configs.checkingintro import check_and_install_requirements
+from configs.checkingintro import check_and_install_requirements,\
+    setUpingFolders
 
 
 if __name__ == '__main__':
-    check_and_install_requirements()
+    # check_and_install_requirements()
+    setUpingFolders()
