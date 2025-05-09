@@ -8,6 +8,7 @@ from utils.filehandling import create_netslocation
 import datetime
 
 
+
 ##########################################
 access_json=propReader()
 nested_loging = f'{access_json["file_location"]}{access_json["appname"]}/log'
@@ -79,4 +80,5 @@ def init_CORS(app):
     #     )
 
 def setUpingFolders(): 
+   
     create_netslocation(nested_loging)
