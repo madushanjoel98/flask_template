@@ -219,6 +219,100 @@ The createResponse function takes a status code and a response object (instance 
 * ✅ Easy to debug and extend
 
 * ✅ Centralized format handling
+
+---
+## 🧾 `LogInstance` – Centralized Logging Utility for Flask
+
+The `LogInstance` class provides a reusable logging utility that integrates with Flask and supports centralized logging configuration using Python's `logging` module.
+
+
+
+### 🎯 Purpose
+
+This class encapsulates the logic for:
+
+- Loading logging configuration from `LOGGING_CONFIG`
+- Attaching log handlers to the Flask app
+- Providing simple methods for logging at different severity levels
+
+
+## 🛠️ Code Breakdown
+
+```python
+import logging
+import logging.config
+from flask import Flask
+from configs.checkingintro import LOGGING_CONFIG
+```
+## 🚀 Class: LogInstance
+### __init__(self, app: Flask = None)
+* Applies the logging configuration using dictConfig.
+* Retrieves a named logger FlaskAppLogger.
+* Optionally initializes with the Flask app instance.
+
+### init_app(self, app: Flask)
+* Overrides Flask’s default logger with the one configured here.
+* Ensures all logs go through the centralized logger.
+
+### Logging Methods
+* ```logger_info(message, file=None)```
+  Logs info-level messages. If file is provided, prepends it to the message.
+* ```logger_error(message, file=None)``` Logs error-level messages.
+* ```logger_warning(message, file=None)``` Logs warning-level messages.
+
+### Usage
+in app.py 
+```python
+from flask import Flask
+from configs.logger import LogInstance
+app = Flask(__name__)
+logger = LogInstance(app)
+logger.logger_info("Server started successfully")
+```
+In other routine blueprint
+```python
+from utils.logger import LogInstance
+logg= LogInstance()
+
+@loginController.route("/")
+def index():
+    logg.logger_info(message="hello starter", file="logincontroller")
+    return "hello"
+``` 
+#### LOGGING_CONFIG
+Typically loaded from configs/checkingintro.py: 
+```python
+LOGGING_CONFIG = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'detailed': {
+            'format': '[%(asctime)s] [%(levelname)s] %(name)s: %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'formatter': 'detailed',
+            'filename': 'app.log',
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+}
+```
+### ✅ Benefits
+- Centralized log control for all app modules.
+- Easily extendable for more advanced handlers (email, rotating files, etc.).
+- Clean separation of configuration and logic.
+
+
 ---
 # 🙌 Final Developer Note
 
