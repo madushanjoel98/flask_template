@@ -1,7 +1,8 @@
 # 🧪 Ottasker Flask Template
 
-**Ottasker Flask Template** is a well-structured Flask project boilerplate designed to accelerate web application development with clean architecture.
+<img src="static/img/otterimage2copy.png" width="400px"/>
 
+**Ottasker Flask Template** is a well-structured Flask project boilerplate designed to accelerate web application development with clean architecture.
 It offers:
 - Organized project structure  
 - Seamless blueprint management  
@@ -10,7 +11,7 @@ It offers:
 
 Whether you're building a small web app or scaling a larger system, Ottasker provides a solid foundation for maintainable and scalable Flask applications.
 
----
+
 
 ## ✨ Features
 
@@ -20,6 +21,8 @@ Whether you're building a small web app or scaling a larger system, Ottasker pro
   <li class="list-group-item"><i class="fa-solid fa-square-up-right"></i> CORS Settings</li>
   <li class="list-group-item"><i class="fa-solid fa-square-up-right"></i> Logging Management</li>
 </ul>
+<a href="https://www.buymeacoffee.com/madushanjoel"><img
+                                        src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=madushanjoel&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 ---
 
