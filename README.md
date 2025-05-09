@@ -220,3 +220,26 @@ The createResponse function takes a status code and a response object (instance 
 
 * ✅ Centralized format handling
 ---
+# 🙌 Final Developer Note
+
+Thank you for exploring and using the **Ottasker Flask Template**!
+
+This project aims to give developers a head start by providing a well-structured Flask boilerplate with:
+
+- 📦 Modular Blueprint Configuration  
+- 🧩 Consistent Request & Response Models  
+- 🛡️ JWT Integration  
+- 🌐 CORS Management  
+- 📜 JSON-based Settings  
+- 📝 Robust Logging System  
+
+Whether you're building a simple prototype or scaling a full-fledged application, this template is designed to be flexible, extensible, and developer-friendly.
+
+If you found this helpful and saved some hours of work, consider supporting the creator 😄👇
+
+---
+<a href="https://www.buymeacoffee.com/madushanjoel"><img
+                                        src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=madushanjoel&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+---
+
+Happy coding! 🚀
