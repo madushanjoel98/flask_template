@@ -1,4 +1,4 @@
-from configs.checkingintro import check_and_install_requirements,\
+from configs.setupConfig import check_and_install_requirements,\
     setUpingFolders
 
 

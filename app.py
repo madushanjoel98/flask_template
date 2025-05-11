@@ -3,8 +3,8 @@ from flask import Flask
 from configs.routingconfig import init_Blueprint
 from configs.jwt_initing import jwt_identity, init_jwt
 from flask.templating import render_template
-from configs.checkingintro import init_CORS, setUpingFolders
-
+from configs.checkingintro import init_CORS
+from configs.setupConfig import setUpingFolders
 
 
 app = Flask(__name__)
