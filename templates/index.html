@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .bgcolor {
+           background-color: rgb(255, 166, 0);
+         }
+         .center {
+           display: flex;
+         
+           align-items: center;
+           flex-direction: column;
+         }
+         .mybutton {
+             margin-top: 10px;
+           color: white;
+           border: 0px solid black;
+           border-radius: 20px 20px 20px 20px;
+           background-color: rgb(28, 84, 255);
+           height: 50px;
+           width: 200px;
+         }
+         
+            </style>
+</head>
+   
+<body class="bgcolor">
+    <div class="container ">
+        <div class="center">
+            <img src=" {{ url_for('static',filename='img/otterimage2copy.png') }}" width="300px" alt="Logo" class="" />
+            <h1 class="text-center ">Ottasker</h1>
+            <h5 class="text-center">Flask Template</h5>
+         
+            <div style="margin-top: 50px;">
+                <div class="card bg-dark ">
+                    <div class="card-body">
+                        <h3 class="text-white">Welcome to Ottasker </h3>
+                    </div>
+                  
+                    <div class="card-footer">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fa-solid fa-book"></i> <a href="https://github.com/madushanjoel98/flask_template/blob/main/README.md"> Read
+                                    Documentation</a></li>
+                            <li class="list-group-item"><i class="fa-brands fa-github"></i> <a
+                                    href="https://github.com/madushanjoel98/flask_template"> Git-hub
+                                    repository</a>
+                                <br>
+
+
+                            </li>
+                            <li class="list-group-item"><i class="fa-solid fa-code"></i> <a
+                                    href="https://madushanjoel98.github.io/Portfolio/">About
+                                    Developer</a></li>
+                           
+                        </ul>
+                             <div class="card-footer text-white">
+                                2025 | developed by madushan joel.
+
+                             </div>
+                       
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
