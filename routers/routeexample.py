@@ -23,7 +23,7 @@ def signupUser():
         stCode = cv.BAD_REQUEST
         res = respm.CommonRequestModel(message=f"Failed {e}", data=None, code=2)
 
-    return jsonify(res.createDictionarie()), stCode
+    return jsonify(res.createDictionaryModule()), stCode
 
 @loginController.route("/")
 def index():

@@ -1,18 +1,18 @@
 from flask import jsonify
 
-
 def createResponse(rescode, response):
     return jsonify(response.createDictionarie, rescode)
 
 
 class CommonRequestModel:
+    #
     def __init__(self, message, code, data, stcodes=None):
         self.message = message
         self.code = code
         self.data = data
         self.stcode = stcodes
 
-    def createDictionarie(self):
+    def createDictionaryModule(self):
         responsd = {
             "message": self.message,
             "code": self.code,

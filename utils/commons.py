@@ -71,3 +71,14 @@ INSUFFICIENT_STORAGE = 507  # WebDAV: The server is unable to store the represen
 LOOP_DETECTED = 508  # WebDAV: The server detected an infinite loop while processing the request
 NOT_EXTENDED = 510  # Further extensions to the request are required for the server to fulfill it
 NETWORK_AUTHENTICATION_REQUIRED = 511  # The client needs to authenticate to gain network access
+
+StartUP_LOGO = """
+ ██████╗ ████████╗████████╗ █████╗ ███████╗██╗  ██╗███████╗██████╗ 
+██╔═══██╗╚══██╔══╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+██║   ██║   ██║      ██║   ███████║███████╗█████╔╝ █████╗  ██████╔╝
+██║   ██║   ██║      ██║   ██╔══██║╚════██║██╔═██╗ ██╔══╝  ██╔══██╗
+╚██████╔╝   ██║      ██║   ██║  ██║███████║██║  ██╗███████╗██║  ██║
+ ╚═════╝    ╚═╝      ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝       
+    Developed by Madushan joel
+"""
+
