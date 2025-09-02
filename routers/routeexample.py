@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
 from model import commonresponsemodel as respm
+from service.sample_service import returntheFullname
 from utils import commons as cv
 from flask_jwt_extended.view_decorators import jwt_required
 from flask_jwt_extended.utils import create_access_token, get_jwt_identity
@@ -29,6 +30,14 @@ def signupUser():
 def index():
     logg.logger_info(message="hello starter", file="logincontroller")
     return "hello"
+
+@loginController.route("/getFullname", methods=["GET"])
+def getFullname():
+    data = request.get_json()
+    firstname = data.get("firstname")
+    lastname = data.get("lastname")
+    full_name = returntheFullname(firstname, lastname)
+    return full_name
 
 @loginController.route("/login", methods=["POST"])
 def login():
