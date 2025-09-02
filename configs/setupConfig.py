@@ -6,6 +6,8 @@ import sys
 from utils.settingsreader import propReader
 from utils.commons import StartUP_LOGO
 
+
+
 access_json=propReader()
 nested_loging = f'{access_json["file_location"]}{access_json["appname"]}/log'
 def setUpingFolders(): 
@@ -18,6 +20,7 @@ def check_and_install_requirements():
     requirements_file = 'requirements.txt'
     try:
         # Read the requirements.txt file
+        install_package("setuptools")
         with open(requirements_file, 'r') as file:
             required_packages = file.read().splitlines()
 
@@ -38,3 +41,11 @@ def check_and_install_requirements():
     except Exception as e:
         print(f"An error occurred: {e}")
 
+def install_package(package_name):
+    """Installs a Python package using pip."""
+    try:
+        # Use sys.executable to ensure the correct Python interpreter's pip is used
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package_name])
+        print(f"Successfully installed {package_name}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing {package_name}: {e}")
