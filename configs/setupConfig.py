@@ -4,7 +4,7 @@ from utils.filehandling import create_netslocation
 import pkg_resources
 import sys
 from utils.settingsreader import propReader
-from utils.commons import StartUP_LOGO
+from utils.app_constants import StartUP_LOGO
 
 access_json=propReader()
 nested_loging = f'{access_json["file_location"]}{access_json["appname"]}/log'

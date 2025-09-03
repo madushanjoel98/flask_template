@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from model import commonresponsemodel as respm
 from service.sample_service import returntheFullname
-from utils import commons as cv
+from utils import app_constants as cv
 from flask_jwt_extended.view_decorators import jwt_required
 from flask_jwt_extended.utils import create_access_token, get_jwt_identity
 from configs.jwt_initing import authenticateUser

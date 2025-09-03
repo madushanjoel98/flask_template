@@ -1,29 +1,19 @@
 from flask import jsonify
 
-def createResponse(rescode, response):
-    return jsonify(response.createDictionarie, rescode)
-
-
+def create_response(response_obj):
+    """Creates a JSON response from the CommonRequestModel instance."""
+    return jsonify(response_obj.to_dict()), response_obj.stcode
 class CommonRequestModel:
-    #
-    def __init__(self, message, code, data, stcodes=None):
+    def __init__(self, message, code, data=None, stcode=200):
         self.message = message
         self.code = code
         self.data = data
-        self.stcode = stcodes
+        self.stcode = stcode
 
-    def createDictionaryModule(self):
-        responsd = {
+    def to_dict(self):
+        """Convert response object to dictionary."""
+        return {
             "message": self.message,
             "code": self.code,
             "data": self.data
         }
-        return responsd
-
-    def createDictionari_respo(self):
-        responsd = {
-            "message": self.message,
-            "code": self.code,
-            "data": self.data
-        }
-        return jsonify(responsd), self.stcode
