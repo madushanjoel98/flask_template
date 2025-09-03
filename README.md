@@ -28,6 +28,17 @@ Whether you're building a small web app or scaling a larger system, Ottasker pro
 
 # 📚 Documentation
 
+### First Step 🦦  
+Open your terminal, navigate to the folder where you downloaded the files, and run the setup.py file to install all the required packages:
+
+```sh
+py setup.py
+```
+Once the setup completes successfully, start the application by running:
+```sh
+py app.py
+```
+
 ### 📄 `setup.py` – Project Initialization Script
 
 This script is designed to automate the initial setup of your Python project. It ensures that all required dependencies are installed and that the necessary directory structure is created before running the application.
