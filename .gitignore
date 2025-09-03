@@ -70,3 +70,6 @@ Thumbs.db # Windows specific
 *~
 *.bak
 *.swp
+
+#vs Code
+.vscode/
