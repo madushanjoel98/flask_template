@@ -26,6 +26,14 @@ Whether you're building a small web app or scaling a larger system, Ottasker pro
 
 ---
 
+### Soical 🕸️
+- **Discord**: https://discord.gg/xweQ2vbK
+  - Discord is important because it brings the community together in real time, making it easy to share updates, get instant feedback, collaborate on ideas, and build stronger connections between developers and users in one organized space.
+- **Reddit🤖** : https://www.reddit.com/r/ottaskerUsers/s/jUP7RHUEks
+  - Reddit is important because it connects you with a massive, topic-focused audience where you can share projects, get constructive feedback, learn from experienced developers, and build visibility for your work in communities that care about your niche.  
+
+
+---
 # 📚 Documentation
 
 ### First Step 🦦  
